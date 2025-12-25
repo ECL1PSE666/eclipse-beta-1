@@ -53,8 +53,6 @@ export default function Home() {
               thumbnail={video.thumbnail}
               plays={`${video.views} views`}
               duration={video.duration}
-              likes={`${video.likes}`}
-              comments={`${video.comments}`}
             />
           ))}
         </div>
