@@ -1,0 +1,52 @@
+@import "tailwindcss";
+
+:root {
+  /* Default to Dark Mode for Eclipse */
+  --background: #111111;
+  --foreground: #ffffff;
+  
+  /* SoundCloud / Eclipse Palette */
+  --primary: #ff5500;
+  --primary-hover: #ff3300;
+  
+  --surface: #1a1a1a;
+  --surface-hover: #222222;
+  
+  --muted: #999999;
+  --border: #333333;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  
+  --color-primary: var(--primary);
+  --color-primary-hover: var(--primary-hover);
+  
+  --color-surface: var(--surface);
+  --color-surface-hover: var(--surface-hover);
+  
+  --color-muted: var(--muted);
+  --color-border: var(--border);
+  
+  --font-sans: var(--font-geist-sans), Arial, sans-serif;
+  --font-mono: var(--font-geist-mono), monospace;
+}
+
+/* Force dark mode styles by default */
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+}
+
+/* Utility for hiding scrollbar but keeping functionality */
+@layer utilities {
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+}
